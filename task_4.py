@@ -14,6 +14,8 @@ def create_polynome(num):
         element = f"{coefficient}x^{i}"
         if element[-1] == "1":
             element = element[:-2]
+        if element[0] == "1" and element[1] == 'x':
+            element = element[1:]
         if coefficient != 0:
             polynome_list.append(element)
         
